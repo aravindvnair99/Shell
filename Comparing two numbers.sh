@@ -1,5 +1,5 @@
-#A shell program to compare two numbers
 #!/bin/sh
+#A shell program to compare two numbers
 echo "Enter any two numbers to compare"
 read a
 read b
