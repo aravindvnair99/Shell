@@ -5,7 +5,7 @@ read -r a
 read -r b
 c=$((a+b))
 echo "Sum is $c"
-if [ $a -gt $b ]
+if [ "$a" -gt "$b" ]
 then
 echo "Difference is $((a-b))"
 else
