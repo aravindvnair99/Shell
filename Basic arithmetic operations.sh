@@ -1,8 +1,8 @@
 #!/bin/sh
 #A shell program to perform basic arithmetic operations
 echo "Enter any two positive numbers to perform basic arithmetic operations"
-read a
-read b
+read -r a
+read -r b
 c=$((a+b))
 echo "Sum is $c"
 if [ $a -gt $b ]
