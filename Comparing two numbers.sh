@@ -1,8 +1,8 @@
 #!/bin/sh
 #A shell program to compare two numbers
 echo "Enter any two numbers to compare"
-read a
-read b
+read -r a
+read -r b
 if [ $a -eq $b ]
 then
    echo "$a is equal to $b"
