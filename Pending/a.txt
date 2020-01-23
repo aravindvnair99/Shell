@@ -1,18 +1,3 @@
-Shell Programming
-1. Write a Shell program to check the given number is even or odd. PROGRAM
-echo "Enter a number:" read n
-if [ `expr $n % 2` = 0 ] then
-echo "Even number"
-else
-echo "Odd number"
-fi
--bash-3.2$ sh evenodd.sh Enter a number:
-6
-Even number
-OUTPUT
--bash-3.2$ sh evenodd.sh Enter a number:
-83
-Odd number
 2. Write a Shell program to check and display 10 leap years. PROGRAM
 for((i = 2000 ; i<= 2036 ; i++)) do
 if [ `expr $i % 400` = 0 ] then
