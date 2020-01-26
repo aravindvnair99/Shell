@@ -4,14 +4,32 @@
 
 echo "Enter the total number of elements:"
 read -r n
-small=10000
-i=1
-while [ "$i" -le "$n" ]; do
-	echo "Enter number $i : "
-	read -r num
-	if [ "$num" -lt "$small" ]; then
-		small=$num
-	fi
-	i=$((i + 1))
+while [[ ! "$n" =~ ^[0-9]+$ ]];do
+	echo "Please enter only numbers"
+	read -r n
 done
-echo "The smallest number among the $n numbers is $small"
+if [ "$n" -eq 0 ]; then
+	echo "Since the number of elements is 0, Smallest number can't be found :("
+else
+	echo "Enter number 1 : "
+	read -r num
+	while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]];do
+		echo "Please enter only numbers"
+		read -r num
+	done
+	small=$num
+	i=2
+	while [ "$i" -le "$n" ]; do
+		echo "Enter number $i : "
+		read -r num
+		while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]];do
+			echo "Please enter only numbers"
+			read -r num
+		done
+		if [ "$num" -lt "$small" ]; then
+			small=$num
+		fi
+		i=$((i + 1))
+	done
+	echo "The smallest number is $small"
+fi
