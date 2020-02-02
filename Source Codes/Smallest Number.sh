@@ -4,7 +4,7 @@
 
 echo "Enter the total number of elements:"
 read -r n
-while [[ ! "$n" =~ ^[0-9]+$ ]];do
+while [[ ! "$n" =~ ^[0-9]+$ ]]; do
 	echo "Please enter only numbers"
 	read -r n
 done
@@ -13,7 +13,7 @@ if [ "$n" -eq 0 ]; then
 else
 	echo "Enter number 1 : "
 	read -r num
-	while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]];do
+	while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]]; do
 		echo "Please enter only numbers"
 		read -r num
 	done
@@ -22,7 +22,7 @@ else
 	while [ "$i" -le "$n" ]; do
 		echo "Enter number $i : "
 		read -r num
-		while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]];do
+		while [[ ! "$num" =~ ^[+-]?[0-9]+$ ]]; do
 			echo "Please enter only numbers"
 			read -r num
 		done
